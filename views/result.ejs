@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/header') %>
+
+<body>
+
+  <%- include('./partials/nav') %>
+
+  <main>
+
+    <h1>Student Result Management System</h1>
+
+    <div class="result">
+
+      <% if (student) { %>
+  
+        <div class="result-heading">
+  
+          <div class="left">
+            <h3>Name: <%= student.lname %> <%= student.fname %> </h3>
+            <h3>Grade: <%= student.grade_level %></h3>
+          </div>
+          <div class="right">
+            <h3>Term: Second Term</h3>
+            <h3>Session: 2021/2022</h3>
+          </div>
+  
+        </div>
+          <% if (enrollment.length > 0) { %>
+
+            <div class="result-details">
+
+              <div class="detail"><h3>Subject Name</h3></div>
+              <div class="detail"><h3>Countinous Assesment</h3></div>
+              <div class="detail"><h3>Exam</h3></div>
+              <div class="detail"><h3>Total</h3></div>
+              <div class="detail"><h3>Grade</h3></div>
+
+            </div>
+
+            <% enrollment.forEach((subject) => { %>
+  
+              <div class="result-details">
+  
+                <div class="detail"><%= subject.subject_name %></div>
+                <div class="detail"><%= subject.c_assesment %></div>
+                <div class="detail"><%= subject.exam_score %></div>
+                <div class="detail"><%= subject.total %></div>
+                <div class="detail"><%= subject.grade %></div>
+                
+              </div>
+    
+            <% }) %>
+            
+          <% } %>
+          
+        </div>
+          
+      <% } else { %>
+        <h1>Student not found</h1>
+      <% } %>
+    
+    </div>
+
+    <button>Print Result</button>
+  
+  </main>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

@@ -1,0 +1,175 @@
+body {
+  background: #aaa;
+  font-size: 16px;
+}
+/* Admin Styles */
+.content {
+  display: flex;
+  width: fit-content;
+  margin: 10px auto;
+}
+.content .sidebar {
+  width: 150px;
+  margin: 0 10 0 0px;
+  background: #eee;
+  box-sizing: border-box;
+}
+.sidebar ul {
+  list-style-type: none;
+  list-style-position: inside;
+  padding: 0;
+}
+.sidebar ul li {
+  border-top: solid 1px red;
+  padding: 15px 20px;
+  margin: 5px 0;
+}
+.content main {
+  width: 600px;
+  margin: 0 10px;
+  padding: 20px;
+}
+
+/* nav styles */
+nav {
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  text-transform: uppercase;
+  padding: 0 20px;
+  margin-top: 20px;
+}
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 0 20px;
+}
+nav a {
+  text-decoration: none;
+  cursor: pointer;
+  color: black;
+}
+
+/* main styles */
+main {
+  width: 800px;
+  margin: 10px auto 50px;
+  padding:20px;
+  background: #eee;
+}
+label {
+  display: block;
+  margin: 20px 0 10px
+}
+input {
+  display: block;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 20px;
+  border-radius: 7px;
+}
+.subject-score {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+}
+input[type=checkbox] {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 10px 5px;
+}
+.score {
+  display: inline-block;
+  margin: 5px 0;
+}
+input.score {
+  width: 50px;
+  height: 20px;
+}
+label.heading {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+select {
+  height: 30px;
+  border-radius: 4px;
+}
+button {
+  width: 100px;
+  padding: 10px;
+  border-radius: 7px;
+}
+
+/* Student details styles */
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-bottom: solid 3px #555;
+}
+.student-details {
+  display: flex;
+  justify-content: left;
+  margin-top: 10px;
+  padding: 10px 0;
+  border-bottom: solid 3px #555;
+}
+/* Subject styles */
+.subject {
+  display: flex;
+  justify-content: space-between;
+}
+.enroll-subject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  margin: 10px auto;
+  border-bottom: solid 2px #555;
+}
+.invisible-form {
+  display: none;
+}
+
+/*result styles */
+.result {
+  margin-bottom: 80px;
+}
+.result-heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  margin-bottom: 20px;
+  border-bottom: solid 3px #555;
+}
+.result-details {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 0;
+  border-bottom: solid 1px #555;
+}
+.detail {
+  width: 110px;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 5px 0;
+}
+.subject-name {
+  text-align: start;
+  padding-left: 10px;
+}
+
+/* footer styles */
+footer {
+  margin: 50px auto;
+  text-align: center;
+}

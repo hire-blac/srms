@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header') %>
+<body>
+
+  <%- include('./partials/nav') %>
+
+  <div class="content">
+    <%- include('./partials/sidebar') %>
+
+    <main>
+      <h1>Edit <%= subject.subject_name %> scores for Mignonmawu</h1>
+      <p>Countinous Assesment: <%= subject.c_assesment %> </p>
+      <p>Exam: <%= subject.exam_score %> </p>
+      <p>Total: <%= subject.total %> </p>
+      <p>Grade: <%= subject.grade %> </p>
+
+      <form action="" method="put">
+        <label for="c_assesment">Countinous Assesment:</label>
+        <input type="number" name="c_assesment" id="" min="0" max="40">
+
+        <label for="c_assesment">Exam Score:</label>
+        <input type="number" name="exam_score" id="" min="0" max="60">
+
+        <button type="submit">submit</button>
+      </form>
+    </main>
+  </div>
+
+  <%- include('./partials/footer') %>
+  
+</body>
+</html>

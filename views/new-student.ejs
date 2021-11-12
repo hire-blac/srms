@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/header') %>
+
+<body>
+
+  <%- include('./partials/nav') %>
+
+  <div class="content">
+
+    <%- include('partials/sidebar') %>
+
+    <main>
+
+      <h1>Add New Student</h1>
+  
+      <form action="/students/new" method="post">
+    
+        <label for="matric_num">Matric Num:</label>
+        <input type="text" name="matric_num" placeholder="Matric Num">
+    
+        <label for="fname">First Name:</label>
+        <input type="text" name="fname" placeholder="First Name">
+    
+        <label for="lname">Last Name:</label>
+        <input type="text" name="lname" id="" placeholder="Last Name">
+    
+        <label for="d_o_b">Date of Birth</label>
+        <input type="date" name="d_o_b" id="">
+        
+        <button>submit</button>
+    
+      </form>
+    
+    </main>
+  
+  </div>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

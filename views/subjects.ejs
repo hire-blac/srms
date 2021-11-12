@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <%- include('./partials/header') %>
+
+<body>
+
+  <%- include('./partials/nav') %>
+
+  <div class="content">
+
+    <%- include('partials/sidebar') %>
+    <main>
+
+      <% if (subjects) { %>
+        <h2>List of available subjects</h2>
+        <ul>
+          <% subjects.forEach(subject => { %>
+            <li>
+              <%= subject.subject_name %>
+            </li>
+          <% }) %>
+        </ul>
+      <% } %>
+  
+      <h3>Add New Subject</h3>
+  
+      <form action="/subjects" method="post">
+    
+        <label for="subject_name">Subject Name:</label>
+        <input type="text" name="subject_name" id="">
+        </select>
+        
+        <button>submit</button>
+    
+      </form>
+    
+    </main>
+
+  </div>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

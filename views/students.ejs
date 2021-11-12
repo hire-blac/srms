@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header') %>
+<body>
+  <%- include('./partials/nav') %>
+
+  <div class="content">
+
+    <%- include('partials/sidebar') %>
+
+    <main>
+
+      <h2>Students</h2>
+      <a class="button" href="/students/new">Add New Student</a>
+      
+      <div class="student-list">
+        <div class="list-header">
+          <div class="detail">Matric Num</div>
+          <div class="detail">Last Name</div>
+          <div class="detail">First Name</div>
+          <div class="detail">Date of Birth</div>
+          <div class="detail">Grade</div>
+        </div>
+        <% if(students.length > 0) { %>
+          <% students.forEach(student => { %>
+            <div class="student-details">
+              <div class="detail"><%= student.matric_num %></div>
+              <div class="detail"><%= student.lname %></div>
+              <div class="detail"><%= student.fname %></div>
+              <div class="detail"><%= student.d_o_b.toLocaleDateString() %></div>
+              <div class="detail"><%= student.grade_level %></div>
+  
+              <div class="detail"><a href="/students/<%= student._id %> ">View student</a></div>
+            </div>
+          <% }) %>
+        <% } else { %>
+          <p>There aren't any students to display</p>
+        <% } %>   
+        
+      </div>
+      
+    </main>
+  
+  </div>
+  
+  <%- include('./partials/footer') %>
+
+</body>
+</html>

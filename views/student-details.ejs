@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header') %>
+<body>
+  
+  <%- include('./partials/nav') %>
+
+  <div class="content">
+
+    <%- include('partials/sidebar') %>
+
+    <main>
+
+      <h1><%= student.fname %> <%= student.lname %></h1>
+      <h3>Matric. Number: <%= student.matric_num %></h3>
+      <h3>Date of Birth: <%= student.d_o_b.toLocaleDateString() %> </h3>
+  
+      <h2>Subjects enrolled in:</h2>
+  
+      <% if (enrollment.length > 0) { %>
+        <div class="result-details">
+          <div class="detail">Subject Name</div>
+          <div class="detail">Countinous Assesment</div>
+          <div class="detail">Exam</div>
+          <div class="detail">Total</div>
+          <div class="detail">Grade</div>
+          <div class="detail"></div>
+        </div>
+        
+        <% enrollment.forEach(subject => { %>
+          <div class="result-details">
+            <div class="detail subject-name"><%= subject.subject_name %></div>
+            <div class="detail"><%= subject.c_assesment %></div>
+            <div class="detail"><%= subject.exam_score %></div>
+            <div class="detail"><%= subject.total %></div>
+            <div class="detail"><%= subject.grade %></div>
+            <div class="detail"><a href="/edit/<%= subject._id %> ">Edit scores</a></div>
+          </div>
+        <% }) %>
+  
+      <% } else { %>
+        <h3><%= student.fname %> hasn't been enrolled for any subject.</h3>
+      <% } %>
+  
+      <br>
+      <div class="detail"><a href="/enroll/<%= student._id %>">Enroll student</a></div>
+       
+    </main>
+  
+  </div>
+
+  <%- include('./partials/footer') %>
+
+</body>
+</html>
