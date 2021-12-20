@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<%- include('./partials/header') %>
+<%- include('../partials/header') %>
 <body>
 
-  <%- include('./partials/nav') %>
+  <%- include('../partials/nav') %>
 
   <div class="content">
-    <%- include('./partials/sidebar') %>
+    <%- include('../partials/sidebar') %>
 
     <main>
-      <h1>Edit <%= subject.subject_name %> scores for Mignonmawu</h1>
+      <h1>Edit <%= subject.subject_name %> scores for <%= student.fname %> </h1>
       <p>Countinous Assesment: <%= subject.c_assesment %> </p>
       <p>Exam: <%= subject.exam_score %> </p>
       <p>Total: <%= subject.total %> </p>
@@ -27,7 +27,7 @@
     </main>
   </div>
 
-  <%- include('./partials/footer') %>
+  <%- include('../partials/footer') %>
   
 </body>
 </html>
